@@ -8,6 +8,7 @@ const getGoods = () => {
             .then((res) => res.json())
             .then((data)=>{
                 console.log(data)
+                localStorage.setItem('goods', JSON.stringify(data))
             })
         }
 
@@ -23,6 +24,7 @@ const getGoods = () => {
     // console.log(localStorage);
     // localStorage.removeItem('goods')
     // console.log(localStorage);
+
 }
 
 getGoods()
